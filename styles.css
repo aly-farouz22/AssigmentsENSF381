@@ -1,0 +1,125 @@
+header {
+    background-color: #333;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customer-reviews .stars {
+    color: gold; 
+}
+
+nav {
+    background-color: #333;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+}
+
+.shop-now-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    text-decoration: none;
+}
+
+.customer-reviews {
+    display: flex;
+    flex-direction: column;
+    background-color:  #ddd;
+    padding: 20px;
+    margin: 20px;
+}
+
+footer {
+    background-color: #333;
+    color:  white;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+.product-listing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+}
+
+.product {
+    width: calc(50% - 20px);
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+.product:nth-child(even) {
+    margin-left: 20px;
+}
+
+.product:hover {
+    background-color: #ffffff;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    max-height: 170px;
+}
+
+.product h2 {
+    color: #333;
+}
+
+.product p {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.product button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: back-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #45A049;
+}
