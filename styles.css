@@ -123,3 +123,96 @@ footer {
 .product button:hover {
     background-color: #45A049;
 }
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ddd; 
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px; 
+}
+
+
+.contact-method {
+    background-color: #ddd; 
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px; 
+}
+
+
+a:hover {
+    color: #007BFF; 
+}
+
+
+
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; 
+}
+
+.login-form {
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-form label {
+    display: block;
+    margin: 10px 0;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.login-form input::placeholder {
+    color: #666; 
+}
+
+.login-form button {
+    background-color: #4CAF50;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    opacity: 0.5;
+    border: none; 
+    color: white; 
+    cursor: pointer; 
+    width: 100%;
+}
+
+.login-form button:hover {
+    background-color: #45A049;
+    opacity: 1.0;
+}
+
+.login-form a {
+    color: #007BFF;
+    text-decoration: none; 
+    margin: 10px 0;
+    display: inline-block; 
+}
+
+.login-form a:hover {
+    text-decoration: underline; 
+}
