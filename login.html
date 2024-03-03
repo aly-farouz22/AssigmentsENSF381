@@ -25,7 +25,8 @@
 
     <main class="login-form-section">
         <div>
-            
+            <form id="loginForm">
+                <p>
                     <label for="username">Username:</label><br>
                     <input type="text" id="username" name="username" placeholder="Enter your username">
                 </p>
@@ -34,18 +35,50 @@
                     <input type="password" id="password" name="password" placeholder="Enter your password">
                 </p>
                 <p>
-                    <button type="submit">Login</button>
+                    <button type="button" onclick="login()">Login</button>
                 </p>
                 <p>
-                    Dont't have an account? <a href="#" class="signup.html">Sign up</a> 
+                    Don't have an account? <a href="#" class="signup.html">Sign up</a> 
                 </p>
             </form>
         </div>
     </main>
 
+    <div id="messageBox" class="message-box-container"></div>
+
     <footer>
         <p>&copy; 2024 Sony. All rights reserved.</p>
     </footer>
+
+    <script>
+       function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(data => {
+            var found = data.some(user => user.username === username && user.email === password);
+            if (found) {
+                showMessage("Success! User authenticated.");
+            } else {
+                showMessage("Error! Invalid username or password.");
+            }
+        })
+        .catch(error => {
+            showMessage("Error! Unable to fetch data from the API.");
+        });
+}
+
+
+        function showMessage(message) {
+            var messageBox = document.getElementById("messageBox");
+            messageBox.innerHTML = '<p>' + message + '</p>';
+            messageBox.style.border = '2px solid';
+            messageBox.style.backgroundColor = '#f9f9f9';
+            messageBox.style.padding = '10px';
+            messageBox.style.margin = '20px';
+        }
+    </script>
 </body>
 </html>
- 
