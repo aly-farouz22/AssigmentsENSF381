@@ -258,3 +258,17 @@ a:hover {
 #message-text {
     margin: 0;
 }
+
+.remove-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.remove-btn:hover {
+    background-color: #ff0000;
+}

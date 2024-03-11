@@ -82,7 +82,7 @@
                 messageText.textContent = 'Signup successful';
                 messageBox.style.borderColor = 'green';
             } else {
-                messageText.textContent = errorMessage;
+                messageText.innerHTML = errorMessage.replace(/\n/g, "<br>");
                 messageBox.style.borderColor = 'red';
             }
         });
