@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -13,36 +14,71 @@
 
     <div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contacts.html">Contact</a>
-            <a href="login.html">Login</a>
+            <ul> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
         </nav>
     </div>
 
-    <main>
-        <div class="login-form">
-            <h2>Login</h2>
-            
+    <main class="login-form-section">
+        <div>
+            <form id="loginForm">
+                <p>
                     <label for="username">Username:</label><br>
-                    <input type="text" id="username" name="username">
+                    <input type="text" id="username" name="username" placeholder="Enter your username">
                 </p>
                 <p>
                     <label for="password">Password:</label><br>
-                    <input type="password" id="password" name="password">
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
                 </p>
                 <p>
-                    <button type="submit">Login</button>
+                    <button type="button" onclick="login()">Login</button>
                 </p>
                 <p>
-                    New user? <a href="signup.html">Sign up</a> 
+                    Don't have an account? <a href="signup.html">Sign up</a> 
                 </p>
             </form>
         </div>
     </main>
 
+    <div id="messageBox" class="message-box-container"></div>
+
     <footer>
         <p>&copy; 2024 Sony. All rights reserved.</p>
     </footer>
+
+    <script>
+       function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(data => {
+            var found = data.some(user => user.username === username && user.email === password);
+            if (found) {
+                showMessage("Success! User authenticated.");
+            } else {
+                showMessage("Error! Invalid username or password.");
+            }
+        })
+        .catch(error => {
+            showMessage("Error! Unable to fetch data from the API.");
+        });
+}
+
+
+        function showMessage(message) {
+            var messageBox = document.getElementById("messageBox");
+            messageBox.innerHTML = '<p>' + message + '</p>';
+            messageBox.style.border = '2px solid';
+            messageBox.style.backgroundColor = '#f9f9f9';
+            messageBox.style.padding = '10px';
+            messageBox.style.margin = '20px';
+        }
+    </script>
 </body>
 </html>
