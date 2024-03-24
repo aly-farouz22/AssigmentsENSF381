@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Homepage from './components/Homepage';
-import Productpage from './components/Productpage';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
+import Homepage from './component/Homepage'; 
+import Productpage from './component/Productpage';
 
 function App() {
   return (

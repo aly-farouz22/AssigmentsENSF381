@@ -1,13 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
 
-const Header = () => {
+function Header() {
   return (
     <header>
       <div className="logo">
-        <Link to="/">
-          <img src="/path/to/logo.png" alt="Logo" />
-        </Link>
+        <img src="/logo.png" alt="Company Logo" /> 
       </div>
       <div className="company-name">
         <h1>Company Name</h1>
@@ -21,6 +19,6 @@ const Header = () => {
       </nav>
     </header>
   );
-};
+}
 
 export default Header;
