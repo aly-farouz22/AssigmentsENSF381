@@ -13,7 +13,7 @@ function ProductItem({ product, addToCart }) {
 
   return (
     <div className="product-item" onMouseEnter={handleToggleDetails} onMouseLeave={handleToggleDetails}>
-      <img src={product.image} alt={product.name} />
+      <img src={product.image} alt={product.name} style={{ width: '150px' }} />
       <h3>{product.name}</h3>
       <p>{showDetails && product.description}</p>
       <p>${product.price}</p>
